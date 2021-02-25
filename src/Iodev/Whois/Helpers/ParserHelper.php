@@ -288,6 +288,9 @@ class ParserHelper
             if (preg_match('~([a-z]\.)?\s*\[(.+?)\]\s+(.*)$~', $line, $m)) {
                 $line = sprintf('%s: %s', $m[2], $m[3]);
             }
+            // .tw
+            $line = preg_replace('~^(\s*)Record (expires|created) on (.*?) \(.*?$~', '\1Record \2 on: \3', $line);
+
             $isHeader = preg_match('~^\w+(\s+\w+){0,2}:$~', $line);
             if ($isHeader) {
                 $outLines[] = '';
@@ -331,6 +334,32 @@ class ParserHelper
             $prevPad = empty($line) ? 0 : self::calcIndent($line, $biasIndentFn);
             $outLines[] = $line;
         }
+        return $outLines;
+    }
+
+    /**
+     * remove indent if most lines are indented
+     * @param array $lines
+     */
+    public static function removeGlobalIndent($lines)
+    {
+        // fix for .tw
+        $indent = 0;
+        if (substr($lines[0], 0, 12) === 'Domain Name:') {
+            $indent = 3;
+        }
+
+        if ($indent == 0) {
+            return $lines;
+        }
+        $outLines = [];
+        foreach ($lines as $line) {
+            if (substr($line, 0, $indent) == str_repeat(' ', $indent)) {
+                $line = substr($line, $indent);
+            }
+            $outLines[] = $line;
+        }
+
         return $outLines;
     }
 }

@@ -85,6 +85,7 @@ class IndentParser extends BlockParser
         if ($this->isAutofix) {
             $lines = ParserHelper::autofixTldLines($lines);
             $lines = ParserHelper::removeInnerEmpties($lines, [__CLASS__, 'biasIndent']);
+            $lines = ParserHelper::removeGlobalIndent($lines);
         }
         $lines = array_filter($lines, [__CLASS__, 'validateLine']);
         $blocks = ParserHelper::linesToSpacedBlocks($lines, [__CLASS__, 'validateStopline']);

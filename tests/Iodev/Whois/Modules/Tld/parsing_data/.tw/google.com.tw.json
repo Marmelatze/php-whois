@@ -1,0 +1,20 @@
+{
+  "domainName": "google.com.tw",
+  "whoisServer": "",
+  "nameServers": [
+    "ns1.google.com",
+    "ns2.google.com",
+    "ns3.google.com",
+    "ns4.google.com"
+  ],
+  "dnssec": "",
+  "creationDate": "2000-08-29 00:00:00 GMT+0000",
+  "expirationDate": "2021-11-09T00:00:00-0000",
+  "states": [
+    "clientdeleteprohibited",
+    "clienttransferprohibited",
+    "clientupdateprohibited"
+  ],
+  "owner": "Google Inc.",
+  "registrar": "Markmonitor, Inc."
+}

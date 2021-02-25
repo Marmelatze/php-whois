@@ -794,7 +794,7 @@ class TldParsingTest extends TestCase
 
             // .TW
             [ "free.tw", ".tw/free.txt", null ],
-            // [ "google.com.tw", ".tw/google.com.tw.txt", ".tw/google.com.tw.json" ],
+            [ "google.com.tw", ".tw/google.com.tw.txt", ".tw/google.com.tw.json" ],
 
             // .TZ
             [ "free.tz", ".tz/free.txt", null ],

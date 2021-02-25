@@ -67,7 +67,8 @@
     "record created",
     "activation",
     "Fecha de registro",
-    "Relevant dates"
+    "Relevant dates",
+    "Record created on"
   ],
   "expirationDateKeys": [
     "expirationdate",
@@ -91,7 +92,8 @@
     "valid until",
     "validity",
     "Fecha de vencimiento",
-    "Relevant dates"
+    "Relevant dates",
+    "Record expires on"
   ],
   "updatedDateKeys": [
     "Modified Date",
@@ -160,7 +162,8 @@
     "sponsoring registrar organization",
     "registrar created",
     "registar created",
-    "Registrar Handle"
+    "Registrar Handle",
+    "Registration Service Provider"
   ],
   "statesKeys": [
     "domain status",
@@ -264,7 +267,8 @@
     {"current registar": ""},
     {"registrar_name": ""},
     {"registrar created": ""},
-    {"registar created": ""}
+    {"registar created": ""},
+    {"Registration Service Provider": ""}
   ],
   "registrarReservedSubsets": [
     {"nsset": "", "billing-c": ""},
@@ -318,6 +322,7 @@
     "International Name",
     "name",
     "address",
-    "person"
+    "person",
+    "Registration Service Provider"
   ]
 }
